@@ -17,7 +17,7 @@ for i in range(0, n):
     lst.append(ele)
 
 tensor=np.array(lst)
-print(tensor)
+
 class StressTensorValues:
     def __init__(self,**kywrg):##class for geting the stress values and inert them in the program
         self.tensor=tensor
@@ -73,5 +73,5 @@ class plotingTheCircle(getRadiusOfTheCircle):##in this class we will use plot li
         
         
 
-#plots=plotingTheCircle()##calling the class which will plot our mohr's circle
-#plots.ploting()##ploting it
+plots=plotingTheCircle()##calling the class which will plot our mohr's circle
+plots.ploting()##ploting it
