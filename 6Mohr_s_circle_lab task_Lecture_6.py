@@ -1,10 +1,23 @@
 #Importing the necessary libraries
+from msvcrt import kbhit
 import numpy as np
 from pylab import *
 from numpy.linalg import eig
 from numpy.linalg.linalg import eigvals
 import matplotlib.pyplot as plt
-tensor=np.array([[90,0,0], [0,96,0], [0,0,-50]])
+lst = [ ]
+elements=["Sx","txy","txz","tyx","Sy","tyz","tzx","tzy","Sz"]
+n = 3
+##Getting the elemnts from the user
+for i in range(0, n):
+    x=2
+    x=x*i
+    ele = [float(input("Please enter {0}: ".format(elements[i+x]) )), 
+    float(input("Please enter {0}: ".format(elements[i+x+1]) )),float(input("Please enter {0}: ".format(elements[i+x+2]) ))]
+    lst.append(ele)
+
+tensor=np.array(lst)
+print(tensor)
 class StressTensorValues:
     def __init__(self,**kywrg):##class for geting the stress values and inert them in the program
         self.tensor=tensor
@@ -60,5 +73,5 @@ class plotingTheCircle(getRadiusOfTheCircle):##in this class we will use plot li
         
         
 
-plots=plotingTheCircle()##calling the class which will plot our mohr's circle
-plots.ploting()##ploting it
+#plots=plotingTheCircle()##calling the class which will plot our mohr's circle
+#plots.ploting()##ploting it
