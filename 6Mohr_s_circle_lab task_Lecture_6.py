@@ -1,5 +1,4 @@
 #Importing the necessary libraries
-from msvcrt import kbhit
 import numpy as np
 from pylab import *
 from numpy.linalg import eig
